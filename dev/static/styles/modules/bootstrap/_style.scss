@@ -1,0 +1,36 @@
+.form-control {
+  border-radius: 0;
+  &:focus {
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    border-radius: 5px;
+    color: $input-focus-color;
+    outline: 0;
+    border-bottom-color: transparent;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+.form-check-input {
+  height: 22px;
+  width: 22px;
+}
+.form-check-input:checked {
+  // border-color: $blue-color;
+}
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+  border-color: transparent;
+}
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+  border-color: transparent;
+}
+.invalid-feedback {
+  font-size: 10px;
+}
+
+.dropdown-menu {
+  z-index: 10;
+}

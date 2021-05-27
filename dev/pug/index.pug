@@ -3,6 +3,9 @@ extends layout/main
 block variables
 	-var title = 'Главная страница'
 	-var pageClass = 'index-page'
+	-var mainClass = 'index'
 
 block content
 	main(class=pageClass)
+		include modules/nav/main-nav
+		include pages/index/main

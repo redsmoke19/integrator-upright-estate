@@ -1,0 +1,17 @@
+mixin socialLink(link,page,name)
+	li.nav__item(class=pageClass===page ? 'active' : false)
+		a.nav__link(href=pageClass===page ? false : link)
+			span.nav__name #{name}
+
+nav.nav
+	a.nav__logo(href=pageClass==='index-page' ? false : 'index.html')
+		span.nav__logo-text Upright Estate
+	ul.nav__list
+		+socialLink('new-buildings.html', 'new-building-page', 'Новостройки')
+		+socialLink('secondary-buildings.html', 'secondary-page', 'Вторичная')
+		+socialLink('commercial-buildings.html', 'commercial-page', 'Коммерческая')
+		+socialLink('news.html', 'news-page', 'Новости')
+		+socialLink('partners.html', 'partners-page', 'Партнёрская программа')
+		+socialLink('about.html', 'about-page', 'О компании')
+		+socialLink('services.html', 'services-page', 'Услуги')
+
