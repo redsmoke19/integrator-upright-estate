@@ -1,0 +1,69 @@
+mixin footerSocialLink(link,page,name)
+	li.footer-nav__item(class=pageClass===page ? 'active' : false)
+		a.footer-nav__link(href=pageClass===page ? false : link)
+			span.footer-nav__name #{name}
+
+footer.footer
+	.footer__row
+		.footer__left-col
+			a.footer__logo(href=pageClass==='index-page' ? false : 'index.html')
+				+icon('icon-logo-yellow-desktop', 'footer__icon', '100', '54')
+			ul.footer__social.footer-social
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на вконтакте
+						+icon('icon-vk', 'footer-social__icon', '20', '20')
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на инстаграм
+						+icon('icon-instagram', 'footer-social__icon', '20', '20')
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на facebook
+						+icon('icon-facebook', 'footer-social__icon', '20', '20')
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на телеграм
+						+icon('icon-telegram', 'footer-social__icon', '20', '20')
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на skype
+						+icon('icon-skype', 'footer-social__icon', '20', '20')
+				li.footer-social__item
+					a.footer-social__link(href="#")
+						span.visually-hidden Ссылка на whatsapp
+						+icon('icon-whatsapp', 'footer-social__icon', '20', '20')
+		.footer__middle-col
+			nav.footer__nav.footer-nav
+				ul.footer-nav__list
+					+footerSocialLink('new-buildings.html', 'new-building-page', 'Новостройки')
+					+footerSocialLink('secondary-buildings.html', 'secondary-page', 'Вторичная')
+					+footerSocialLink('commercial-buildings.html', 'commercial-page', 'Коммерческая')
+					+footerSocialLink('news.html', 'news-page', 'Новости')
+					+footerSocialLink('about.html', 'about-page', 'О компании')
+					+footerSocialLink('services.html', 'services-page', 'Услуги')
+		.footer__right-col
+			.footer__locations
+				+icon('icon-locations', 'footer__locations--icon', '16', '20')
+				p.footer__locations-text 127015, Москва, Новодмитровская ул., 2, корпус 2 (бизнес-центр «Савёловский Сити»)
+			.footer__phones
+				+icon('icon-phone', 'footer__phones--icon', '14', '20')
+				.footer__phone-box
+					a.footer__link(href="tel:+79876543210")
+						span #[span.footer__link--grey +7] #[span.footer__link--yellow (987)] 654-32-10
+					span.footer__phone-text — главный офис
+				.footer__phone-box
+					a.footer__link(href="tel:+79876543210")
+						span #[span.footer__link--grey +7] #[span.footer__link--yellow (987)] 654-32-10
+					span.footer__phone-text — отдел продаж
+			.footer__times
+				+icon('icon-watch', 'footer__times--icon', '14', '20')
+				p.footer__time #[span Пн-Пт —] 10:00-19:30
+	.footer__bottom
+		p.footer__copyright Upright Estate © 2021. Все права защищены.
+		.footer__create
+			span Создание сайта:
+			a.footer__create--link(href="https://integrator.digital" target="_black")
+				span.visually-hidden Ссылка на сайт Integrator Digital
+				+icon('icon-intergator', 'footer__create--icon', '114', '16')
+

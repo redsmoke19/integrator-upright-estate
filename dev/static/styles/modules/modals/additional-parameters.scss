@@ -1,0 +1,40 @@
+.popup-parameters {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  margin: -40px -30px 0;
+  &__item {
+    flex: 0 0 230px;
+    margin: 0 30px;
+    padding-top: 40px;
+  }
+  &__title {
+    color: $gray-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    margin: 0 0 15px 0;
+    padding-top: 16px;
+    position: relative;
+    &::before {
+      background-color: $yellow-color;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 50px;
+    }
+  }
+  &__sub-item {
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+  &__name {
+    color: $gray-color;
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

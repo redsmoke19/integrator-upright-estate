@@ -1,0 +1,54 @@
+.filter {
+  &__main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+  }
+  &__box {
+    flex: 0 0 26.7%;
+  }
+  &__search {
+    flex: 0 0 13.4%;
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        border-color: transparent transparent transparent $white;
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        height: 0;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+      }
+    }
+  }
+  &__parameters {
+    display: flex;
+  }
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: $gray-color;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0;
+    transition: all ease-out 0.15s;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin: 0 30px 0 0;
+    }
+    span {
+      margin: 0 0 0 10px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

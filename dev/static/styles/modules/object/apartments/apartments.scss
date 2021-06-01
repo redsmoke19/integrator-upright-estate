@@ -1,0 +1,236 @@
+.apartments {
+  padding: 0 40px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 30px 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    &:not(:last-child) {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__image {
+    position: relative;
+  }
+  &__logo {
+    outline: 10px solid $yellow-color;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__picture {
+    display: block;
+    height: 330px;
+    width: 100%;
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+  &__descriptions {
+    background: $white url("../images/common/logo-object-bg.svg") no-repeat;
+    background-position: calc(100% - 20px) bottom;
+    background-size: 107px 214px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 20px 30px 54px;
+  }
+  &__top-line {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px 0;
+  }
+  &__name {
+    color: $gray-color;
+    font-size: 40px;
+    line-height: 46px;
+    margin: 0 40px 0 0;
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 32px;
+      width: 3px;
+      background-color: $yellow-color;
+      top: 50%;
+      left: -13px;
+      transform: translateY(-50%);
+    }
+  }
+  &__price {
+    font-family: $secont-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    b {
+      font-family: $main-font;
+      font-weight: 700;
+    }
+    &--dash {
+      display: none;
+    }
+  }
+  &__locations {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px 0;
+  }
+  &__location {
+    align-items: center;
+    color: $gray-color;
+    font-family: $secont-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    display: flex;
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+    &--icon {
+      fill: $yellow-color;
+      margin: 0 10px 0 0;
+    }
+  }
+  &__roominess {
+    color: $gray-color;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 10px 0;
+    span {
+      font-family: $secont-font;
+      font-weight: 300;
+    }
+  }
+  &__text {
+    color: $light-grey-color;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &__button {
+    margin: 0 0 80px 0;
+  }
+}
+
+.apartments__list._classic {
+  .apartments__item {
+    flex-direction: row;
+    max-height: 200px;
+  }
+  .apartments__picture {
+    height: 200px;
+    width: 200px;
+  }
+  .apartments__img {
+    height: 100%;
+  }
+  .apartments__descriptions {
+    background-size: 100px 200px;
+    padding: 17px 30px 20px;
+  }
+  .apartments__top-line {
+    margin: 0 0 5px 0;
+  }
+  .apartments__name {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0 32px 0 0;
+  }
+  .apartments__locations {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .apartments__location {
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+  .apartments__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.apartments__list._gallery {
+  justify-content: space-between;
+  margin: -30px 0 30px 0;
+  .apartments__item {
+    flex: 0 0 280px;
+    height: auto;
+    padding-top: 30px;
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
+  .apartments__logo {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  .apartments__picture {
+    height: 128px;
+    width: 280px;
+  }
+  .apartments__img {
+    height: 100%;
+  }
+  .apartments__descriptions {
+    background-size: 75px 150px;
+    height: 100%;
+    padding: 12px 15px 20px;
+    width: 280px;
+  }
+  .apartments__top-line {
+    flex-direction: column;
+  }
+  .apartments__name {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+  }
+  .apartments__prices {
+    flex-direction: row;
+    &::before {
+      display: none;
+    }
+  }
+  .apartments__price {
+    font-size: 14px;
+    line-height: 17px;
+    &--pretext {
+      display: none;
+    }
+    &--dash {
+      display: inline-block;
+    }
+  }
+  .apartments__locations {
+    flex-direction: column;
+    margin: 0 0 15px 0;
+  }
+  .apartments__location {
+    font-size: 14px;
+    line-height: 17px;
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
+  .apartments__roominess {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    text-align: center;
+  }
+  .apartments__text {
+    display: none;
+  }
+}

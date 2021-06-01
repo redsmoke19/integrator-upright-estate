@@ -1,18 +1,17 @@
 @import "./vars";
-// @import "../../../../../node_modules/bootstrap/scss/bootstrap";
-@import "../../utils/libs/bootstrap/bootstrap";
-// @import "../../utils/libs/bootstrap/functions";
-// @import "../../utils/libs/bootstrap/variables";
-// @import "../../utils/libs/bootstrap/mixins";
-// @import "../../utils/libs/bootstrap/utilities";
-// @import "../../utils/libs/bootstrap/containers";
-// @import "../../utils/libs/bootstrap/grid";
+// @import "../../utils/libs/bootstrap/bootstrap";
+@import "../../utils/libs/bootstrap/functions";
+@import "../../utils/libs/bootstrap/variables";
+@import "../../utils/libs/bootstrap/mixins";
+@import "../../utils/libs/bootstrap/utilities";
+@import "../../utils/libs/bootstrap/containers";
+@import "../../utils/libs/bootstrap/grid";
 // @import "../../utils/libs/bootstrap/dropdown";
 // @import "../../utils/libs/bootstrap/transitions";
 // Helpers
-// @import "../../utils/libs/bootstrap/helpers";
+@import "../../utils/libs/bootstrap/helpers";
 
 // Utilities
-// @import "../../utils/libs/bootstrap/utilities/api";
+@import "../../utils/libs/bootstrap/utilities/api";
 // scss-docs-end import-stack
 @import "./style";

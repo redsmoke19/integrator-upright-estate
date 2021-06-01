@@ -1,0 +1,114 @@
+.home {
+  padding-top: 50px;
+  &__title {
+    color: $gray-color;
+    font-size: 48px;
+    line-height: 56px;
+    margin: 0 0 20px 0;
+  }
+  &__sub-title {
+    color: $gray-color;
+    font-family: $secont-font;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0 0 30px 0;
+  }
+  &__inner {
+    display: flex;
+    padding-top: 60px;
+  }
+  &__image {
+    flex: 0 0 auto;
+    height: 305px;
+    margin: 0 40px 0 0;
+    position: relative;
+    z-index: 2;
+    &::before {
+      background-color: $gray-color;
+      content: '';
+      height: 20px;
+      left: -10px;
+      position: absolute;
+      top: -10px;
+      width: 20px;
+      z-index: -1;
+    }
+    &::after {
+      background-color: $yellow-color;
+      bottom: -5px;
+      content: '';
+      height: 10px;
+      position: absolute;
+      right: -5px;
+      width: 10px;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 305px;
+    overflow: hidden;
+    width: 305px;
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__about-title {
+    color: $gray-color;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    margin: 0 0 30px 0;
+    padding-top: 16px;
+    position: relative;
+    &::after {
+      background-color: $yellow-color;
+      content: '';
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100px;
+    }
+  }
+  &__description {
+    color: $gray-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+  }
+  &__text {
+    color: $light-grey-color;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 15px 0;
+  }
+  &__bottom {
+    align-items: center;
+    display: flex;
+  }
+  &__director {
+    color: $gray-color;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500px;
+    line-height: 19px;
+    margin: 0 25px 0 0;
+    &--position {
+      font-family: $secont-font;
+      font-weight: 300;
+    }
+  }
+  &__signature {
+    height: 68px;
+    object-fit: cover;
+    width: 200px;
+  }
+}
+
+@import './filter';
+

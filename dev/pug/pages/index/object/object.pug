@@ -1,0 +1,17 @@
+aside.object
+	.object__top
+		span.object__count 6 203 объекта
+		ul.object__sort.sorting
+			li.sorting__item
+				button.sorting__button._active(data-tabs-class="_normal")
+					+icon('icon-sorting-row', 'sorting__icon', '20', '20')
+			li.sorting__item
+				button.sorting__button(data-tabs-class="_classic")
+					+icon('icon-sorting-rows', 'sorting__icon', '20', '20')
+			li.sorting__item
+				button.sorting__button(data-tabs-class="_gallery")
+					+icon('icon-sorting-blocks', 'sorting__icon', '20', '20')
+	include apartments/apartments
+	include ../../../modules/footer/footer
+
+

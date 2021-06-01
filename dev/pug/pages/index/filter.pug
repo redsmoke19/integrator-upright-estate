@@ -1,0 +1,34 @@
+.filter__main
+	.filter__box
+		select.js-select(data-trigger id="homeFilterDistrict")
+			option(value="") Округ
+			option(value="Округ 1") Округ 1
+			option(value="Округ 2") Округ 2
+			option(value="Округ 3") Округ 3
+			option(value="Округ 4") Округ 4
+			option(value="Округ 5") Округ 5
+	.filter__box
+		select.js-select(data-trigger id="homeFilterQuarter")
+			option(value="") Район
+			option(value="Район 1") Район 1
+			option(value="Район 2") Район 2
+			option(value="Район 3") Район 3
+			option(value="Район 4") Район 4
+			option(value="Район 5") Район 5
+	.filter__box
+		select.js-select(data-trigger id="homeFilterMetro")
+			option(value="") Метро
+			option(value="Метро 1") Метро 1
+			option(value="Метро 2") Метро 2
+			option(value="Метро 3") Метро 3
+			option(value="Метро 4") Метро 4
+			option(value="Метро 5") Метро 5
+	button.button.filter__search(type="submit")
+		span Найти
+.filter__parameters
+	a.filter__button._popup-link(href="#for-your-task")
+		+icon('icon-target', 'filter__icon', '20', '20')
+		span ЖК под вашу задачу
+	a.filter__button._popup-link(href="#additional-parameters")
+		+icon('icon-parameters', 'filter__icon', '20', '20')
+		span Дополнительные параметры

@@ -1,0 +1,25 @@
+.button {
+  align-items: center;
+  background-color: $yellow-color;
+  border: none;
+  color: $gray-color;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 19px;
+  padding: 20px;
+  transition: all ease-out 0.15s;
+  width: 100%;
+  &:hover {
+    opacity: 0.7;
+  }
+  &--white-text {
+    color: $white;
+    font-weight: 900;
+  }
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid $border-light-color;
+  }
+}

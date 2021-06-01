@@ -5,7 +5,7 @@ mixin socialLink(link,page,name)
 
 nav.nav
 	a.nav__logo(href=pageClass==='index-page' ? false : 'index.html')
-		span.nav__logo-text Upright Estate
+		+icon('icon-logo-desktop', 'nav__icon', '104', '57')
 	ul.nav__list
 		+socialLink('new-buildings.html', 'new-building-page', 'Новостройки')
 		+socialLink('secondary-buildings.html', 'secondary-page', 'Вторичная')

@@ -17,7 +17,9 @@ html(lang="ru-RU")
 			include ../modules/header/header
 			.content
 				block content
-			include ../modules/footer/footer
-		//- script(src="static/js/vendor/libs.js")
-		script(src="static/js/main.js")
+		if pageClass==='index-page'
+			include ../modules/modals/additional-parameters
+			include ../modules/modals/for-your-task
 		block script
+			script(src="static/js/libs.js")
+			script(src="static/js/main.js")

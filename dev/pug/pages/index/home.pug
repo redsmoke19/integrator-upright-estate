@@ -1,0 +1,20 @@
+section.home
+	h1.home__title Мы продаём квартиры<br> премиум- и бизнес-класса
+	p.home__sub-title в 140 новых жилых комплексах центра Москвы
+	.home__filter.filter
+		include filter
+	.home__inner
+		.home__image
+			picture.home__picture
+				source(media="(min-width: 1920px)" srcset="static/images/content/home-photo-desktop@1x.jpg 1x, static/images/content/home-photo-desktop@2x.jpg 2x")
+				img.home__img(src="static/images/content/home-photo-desktop@1x.jpg" srcset="static/images/content/home-photo-desktop@2x.jpg 2x" width="305" height="305" alt="Фото ген. директора" loading="lazy")
+		.home__about
+			h2.home__about-title О компании
+			p.home__description Scelerisque orci ante viverra tincidunt turpis lectus. Tincidunt mi suscipit pretium tincidunt pellentesque aliquam. Vitae blandit molestie hendrerit aliquam quis dui orci aliquet cras.
+			p.home__text Mi vestibulum vitae nunc, massa id tempor, hendrerit diam. Et purus ut volutpat dictum rhoncus, risus senectus ultrices pharetra. Nunc amet condimentum gravida aliquet molestie sapien blandit in. Habitant aliquam blandit ante condimentum ut diam augue amet, ornare. Non odio nunc augue elit posuere eu.
+			.home__bottom
+				p.home__director
+					span.home__director--name Я. Мандрыкина
+					span.home__director--position Ген. директор
+				img.home__signature(src="static/images/content/signature.png" width="200" height="68" alt="Подпись ген. директора")
+

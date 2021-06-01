@@ -10,12 +10,12 @@
     font-display: swap;
   }
 }
-@include font-face('Roboto', '../fonts/roboto/black/Roboto-Light', 300, 'normal');
-@include font-face('Roboto', '../fonts/roboto/black/Roboto-Regulat,', 400, 'normal');
-@include font-face('Roboto', '../fonts/roboto/black/Roboto-Medium,', 500, 'normal');
-@include font-face('Roboto', '../fonts/roboto/black/Roboto-Bold', 700, 'normal');
+@include font-face('Roboto', '../fonts/roboto/light/Roboto-Light', 300, 'normal');
+@include font-face('Roboto', '../fonts/roboto/regular/Roboto-Regular', 400, 'normal');
+@include font-face('Roboto', '../fonts/roboto/medium/Roboto-Medium', 500, 'normal');
+@include font-face('Roboto', '../fonts/roboto/bold/Roboto-Bold', 700, 'normal');
 @include font-face('Roboto', '../fonts/roboto/black/Roboto-Black', 900, 'normal');
 
-@include font-face('Roboto', '../fonts/roboto-condensed/bold/RobotoCondensed-Light,', 300, 'normal');
-@include font-face('Roboto', '../fonts/roboto-condensed/bold/RobotoCondensed-Regular,', 400, 'normal');
-@include font-face('Roboto', '../fonts/roboto-condensed/bold/RobotoCondensed-Bold,', 700, 'normal');
+@include font-face('Roboto-Condensed', '../fonts/roboto-condensed/light/RobotoCondensed-Light', 300, 'normal');
+@include font-face('Roboto-Condensed', '../fonts/roboto-condensed/regular/RobotoCondensed-Regular', 400, 'normal');
+@include font-face('Roboto-Condensed', '../fonts/roboto-condensed/bold/RobotoCondensed-Bold', 700, 'normal');

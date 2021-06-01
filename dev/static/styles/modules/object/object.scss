@@ -1,0 +1,27 @@
+.object {
+  background-color: $bg-gray-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  padding: 32px 0 0;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 54.68% - 200px);
+  &__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+    padding: 0 40px;
+  }
+  &__count {
+    color: $gray-color;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+}
+
+@import './sorting/sorting';
+@import './apartments/apartments';

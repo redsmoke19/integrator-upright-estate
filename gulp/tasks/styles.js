@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const argv = require('yargs').argv;
 const gulpif = require('gulp-if');
-let group_media = require("gulp-group-css-media-queries");
+// let group_media = require("gulp-group-css-media-queries");
 
 // Работаем со стилями
 
@@ -16,7 +16,7 @@ module.exports = function styles() {
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
     .pipe(scss())
-    .pipe(group_media())
+    // .pipe(group_media())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ['last 4 version'],

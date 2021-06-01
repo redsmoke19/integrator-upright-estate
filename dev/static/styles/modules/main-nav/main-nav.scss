@@ -1,0 +1,40 @@
+.nav {
+  background: url("../images/common/logo-desktop-image.svg") no-repeat right 20px;
+  background-size: auto calc(100% - 20px);
+  flex: 0 0 200px;
+  height: 100vh;
+  padding: 110px 0 0 30px;
+  &__logo {
+    color: $gray-color;
+    display: block;
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 0 0 35px 0;
+    text-decoration: none;
+    transition: all ease-out 0.15s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__list {
+    width: 63%;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+  }
+  &__link {
+    color: $gray-color;
+    font-family: $secont-font;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    transition: all ease-out 0.15s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
