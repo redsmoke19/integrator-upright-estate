@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+	-var pageClass = 'complex-page'
+	-var mainClass = 'page'
+
+block content
+	main(class=mainClass)
+		include modules/nav/main-nav
+		include pages/residential-complex/main
+		include pages/residential-complex/tabs/tabs

@@ -1,0 +1,141 @@
+.complex {
+  padding-top: 50px;
+  &__top {
+    align-items: center;
+    display: flex;
+    margin: 0 0 35px 0;
+  }
+  &__logo {
+    margin: 0 45px 0 10px;
+    outline: 10px solid $yellow-color;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top-line {
+    align-items: center;
+    display: flex;
+    margin: 0 0 15px 0;
+  }
+  &__title {
+    color: $gray-color;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70px;
+    margin: 0 30px 0 0;
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 32px;
+      width: 3px;
+      background-color: $yellow-color;
+      top: 50%;
+      left: -13px;
+      transform: translateY(-50%);
+    }
+  }
+  &__price {
+    color: $gray-color;
+    font-family: $secont-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    b {
+      font-family: $main-font;
+      font-weight: 700;
+    }
+  }
+  &__locations {
+    align-items: center;
+    display: flex;
+    margin: 0 0 7px 0;
+  }
+  &__location {
+    align-items: center;
+    display: flex;
+    font-family: $secont-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+    &--icon {
+      fill: $yellow-color;
+      margin: 0 10px 0 0;
+    }
+  }
+  &__roominess {
+    font-size: 16px;
+    line-height: 19px;
+    &--light {
+      font-family: $secont-font;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &__text {
+    color: $light-grey-color;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+    &--bold {
+      color: $gray-color;
+      font-weight: 500;
+    }
+  }
+  &__advantages-list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__advantages-item {
+    padding-left: 16px;
+    position: relative;
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+    &::before {
+      background-color: $yellow-color;
+      content: '';
+      height: 6px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+    }
+  }
+  &__advantages {
+    color: $light-grey-color;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &__features {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+  }
+  &__feature {
+    color: $light-grey-color;
+    font-size: 16px;
+    line-height: 21px;
+    b {
+      color: $gray-color;
+      font-weight: 500;
+    }
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+}
+
+@import './gallery';
+@import './progress';
+@import './dignity';
+@import './flat';

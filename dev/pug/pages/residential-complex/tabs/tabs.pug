@@ -1,0 +1,19 @@
+aside.object.object--complex
+	ul.tabs
+		li.tabs__item
+			button.tabs__button.tabs__complex-link._active(type="button" data-tabs-class="_gallery") Галерея объекта
+		li.tabs__item
+			button.tabs__button.tabs__complex-link(type="button" data-tabs-class="_map") Карта
+		li.tabs__item
+			button.tabs__button.tabs__complex-link(type="button" data-tabs-class="_progress") Ход строительства
+		li.tabs__item
+			button.tabs__button.tabs__complex-link(type="button" data-tabs-class="_dignity") Достоинства
+	.gallery-complex.tabs__complex-content._gallery._active
+		include gallery/gallery
+		include ../../../modules/footer/footer
+	.map-complex.tabs__complex-content._map
+		include map/map
+	.progress-complex.tabs__complex-content._progress
+		include progress/progress
+	.dignity-complex.tabs__complex-content._dignity
+		include dignity/dignity

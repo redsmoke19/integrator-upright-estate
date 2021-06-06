@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'Квартира 253'
+	-var pageClass = 'flat-page'
+	-var mainClass = 'page'
+
+block content
+	main(class=mainClass)
+		include modules/nav/main-nav
+		include pages/flat/main
+		include pages/flat/tabs/tabs

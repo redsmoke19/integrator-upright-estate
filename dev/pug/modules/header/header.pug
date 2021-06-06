@@ -1,0 +1,25 @@
+header.header
+	.header__contacts
+		a.header__link(href="tel:+79876543210")
+			+icon('icon-phone', 'header__icon', '14', '20')
+			span.header__phone #[span.header__link--grey +7] #[span.header__link--yellow (987)] 654-12-10
+		a.header__link(href="#")
+			+icon('icon-consult', 'header__icon', '20', '20')
+			span.header__chat Консультация
+	ul.header__social.header-social
+		li.header-social__item
+			a.header-social__link(href="#")
+				span.visually-hidden Ссылка на инстаграм
+				+icon('icon-instagram', 'header-social__icon', '20', '20')
+		li.header-social__item
+			a.header-social__link(href="#")
+				span.visually-hidden Ссылка на телеграм
+				+icon('icon-telegram', 'header-social__icon', '20', '17')
+		li.header-social__item
+			a.header-social__link(href="#")
+				span.visually-hidden Ссылка на facebook
+				+icon('icon-facebook', 'header-social__icon', '20', '20')
+		li.header-social__item
+			a.header-social__link(href="#")
+				span.visually-hidden Ссылка на whatsApp
+				+icon('icon-whatsapp', 'header-social__icon', '20', '20')

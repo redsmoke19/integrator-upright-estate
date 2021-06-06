@@ -21,6 +21,12 @@
     font-weight: 500;
     line-height: 35px;
   }
+  &--complex {
+    padding: 0;
+  }
+  &--selection {
+    background-color: transparent;
+  }
 }
 
 @import './sorting/sorting';

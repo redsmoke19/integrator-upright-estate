@@ -1,0 +1,58 @@
+article.main-content.main-content--selection
+	include map
+	.selection
+		.selection__inner
+			include ../../modules/header/header
+			.selection__top
+				h1.selection__title Подбор ЖК
+				.filter__parameters
+					a.filter__button._popup-link(href="#for-your-task")
+						+icon('icon-target', 'filter__icon', '20', '20')
+						span ЖК под вашу задачу
+					a.filter__button._popup-link(href="#additional-parameters")
+						+icon('icon-parameters', 'filter__icon', '20', '20')
+						span Дополнительные параметры
+			include filter
+			ul.selection__parameters.selection-parameters
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Tortor luctus ut sed
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Dis viverra consectetur dolor
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Odio porttitor rutrum molestie
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Posuere feugiat integer in nisl
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Sit tortor blandit venenatis auctor
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Amet, ut feugiat gravida ultricies
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')
+				li.selection-parameters__parameter
+					+icon('icon-tag', 'selection-parameters__icon', '9', '10')
+					span.selection-parameters__text Malesuada lectus nunc sed euismod
+					button.selection-parameters__button
+						span.visually-hidden Удалить параметер
+						+icon('icon-close', 'selection-parameters__icon-delete', '10', '10')

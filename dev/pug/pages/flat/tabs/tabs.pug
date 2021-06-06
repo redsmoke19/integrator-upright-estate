@@ -1,0 +1,11 @@
+aside.object.object--complex
+	ul.tabs
+		li.tabs__item
+			button.tabs__button.tabs__complex-link._active(type="button" data-tabs-class="_flat-gallery") Галерея квартиры
+		li.tabs__item
+			button.tabs__button.tabs__complex-link(type="button" data-tabs-class="_layout") Планировка
+	.gallery-complex.tabs__complex-content._flat-gallery._active
+		include flat-gallery/gallery
+		include ../../../modules/footer/footer
+	.layout-flat.tabs__complex-content._layout
+		include flat-layout/layout

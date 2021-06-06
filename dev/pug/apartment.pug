@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'Поиск квартиры'
+	-var pageClass = 'apartment-page'
+	-var mainClass = 'page'
+
+block content
+	main(class=mainClass)
+		include modules/nav/main-nav
+		include pages/apartment/apartment
+		include pages/apartment/object/object

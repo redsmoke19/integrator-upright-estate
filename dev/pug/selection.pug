@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'Подбор ЖК'
+	-var pageClass = 'selection-page'
+	-var mainClass = 'page'
+
+block content
+	main(class=mainClass)
+		include modules/nav/main-nav
+		include pages/selection/selection
+		include pages/selection/object/object

@@ -1,0 +1,57 @@
+.dignity-complex {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 40px 0;
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 46.6%;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 40px;
+  }
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+  }
+  &__top {
+    position: relative;
+    margin: 0 0 6px 0;
+  }
+  &__icon {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__name {
+    font-family: $secont-font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    padding-left: 30px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      background-color: $light-grey-color;
+      content: '';
+      height: 100%;
+      left: 10px;
+      position: absolute;
+      top: 0;
+      width: 1px;
+    }
+  }
+}

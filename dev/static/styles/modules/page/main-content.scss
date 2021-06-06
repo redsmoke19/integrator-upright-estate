@@ -2,4 +2,15 @@
   flex: 0 0 54.68%;
   max-height: 100vh;
   padding: 100px 90px 0 60px;
+  &--selection {
+    flex: 0 0 auto;
+    margin-left: 60px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: calc(100% - 260px);
+  }
+  &--apartment {
+    padding: 40px 90px 0 60px;
+  }
 }

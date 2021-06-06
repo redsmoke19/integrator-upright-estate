@@ -151,47 +151,153 @@
     const selectAllButton = document.querySelector('.for-your-task__button-check');
     const undoAllButton = document.querySelector('.for-your-task__button-undo');
     const checkboxList = document.querySelectorAll('._js-for-your-task-item');
-    selectAllButton.addEventListener('click', () => {
-      checkboxList.forEach(item => {
-        if (!item.checked) {
-          item.checked = true;
-        }
+    if (checkboxList.length > 0) {
+      selectAllButton.addEventListener('click', () => {
+        checkboxList.forEach(item => {
+          if (!item.checked) {
+            item.checked = true;
+          }
+        });
       });
-    });
-    undoAllButton.addEventListener('click', () => {
-      checkboxList.forEach(item => {
-        if (item.checked) {
-          item.checked = false;
-        }
+      undoAllButton.addEventListener('click', () => {
+        checkboxList.forEach(item => {
+          if (item.checked) {
+            item.checked = false;
+          }
+        });
       });
-    });
+    }
   };
   const getSorting = () => {
     const sortingButtons = document.querySelectorAll('.sorting__button');
     const sortingList = document.querySelector('.apartments__list');
-    let tabName;
-    const selectTabNav = function () {
-      sortingButtons.forEach(item => {
-        item.classList.remove('_active');
-      });
-      this.classList.add('_active');
-      tabName = this.getAttribute('data-tabs-class');
-      selectTabContent(tabName);
-    };
-    const selectTabContent = function (tab) {
-      sortingList.classList.remove('_normal');
-      sortingList.classList.remove('_classic');
-      sortingList.classList.remove('_gallery');
-      sortingList.classList.add(tab);
-    };
     if (sortingButtons.length > 0) {
-      sortingButtons.forEach(item => {
-        item.addEventListener('click', selectTabNav);
+      let tabName;
+      const selectTabNav = function () {
+        sortingButtons.forEach(item => {
+          item.classList.remove('_active');
+        });
+        this.classList.add('_active');
+        tabName = this.getAttribute('data-tabs-class');
+        selectTabContent(tabName);
+      };
+      const selectTabContent = function (tab) {
+        sortingList.classList.remove('_normal');
+        sortingList.classList.remove('_classic');
+        sortingList.classList.remove('_gallery');
+        sortingList.classList.add(tab);
+      };
+      if (sortingButtons.length > 0) {
+        sortingButtons.forEach(item => {
+          item.addEventListener('click', selectTabNav);
+        });
+      }
+    }
+  };
+  const getMap = () => {
+    const complexMap = document.querySelector('#complex-map');
+    const selectionMap = document.querySelector('#selection-map');
+    if (complexMap) {
+      ymaps.ready(function () {
+        const map = new ymaps.Map(complexMap, {
+          center: [59.850509, 30.304028],
+          zoom: 14,
+          controls: [],
+        });
+        const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        );
+        const myPlacemark = new ymaps.Placemark(
+          map.getCenter(),
+          {
+            hintContent: 'Офис Intergator.Digital',
+          },
+          {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './static/images/common/icon-marker.svg',
+            // Размеры метки.
+            iconImageSize: [31, 40],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [15, 40],
+          }
+        );
+        map.geoObjects.add(myPlacemark);
       });
     }
+    if (selectionMap) {
+      ymaps.ready(function () {
+        const map = new ymaps.Map(selectionMap, {
+          center: [59.850509, 30.304028],
+          zoom: 14,
+          controls: [],
+        });
+        const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        );
+        const myPlacemark = new ymaps.Placemark(
+          map.getCenter(),
+          {
+            hintContent: 'Офис Intergator.Digital',
+          },
+          {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: './static/images/common/icon-marker.svg',
+            // Размеры метки.
+            iconImageSize: [31, 40],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [15, 40],
+          }
+        );
+        map.geoObjects.add(myPlacemark);
+      });
+    }
+  };
+  const getTabs = () => {
+    const complexTabsLink = document.querySelectorAll('.tabs__complex-link');
+    const complexTabsContent = document.querySelectorAll('.tabs__complex-content');
+
+    const getTab = function (links, content) {
+      let tabName;
+      const selectTabNav = function () {
+        links.forEach(item => {
+          item.classList.remove('_active');
+        });
+        this.classList.add('_active');
+        tabName = this.getAttribute('data-tabs-class');
+        selectTabContent(tabName);
+      };
+      const selectTabContent = function (tab) {
+        content.forEach(item => {
+          const classList = item.classList;
+          if (classList.contains(tab)) {
+            classList.add('_active');
+          } else {
+            classList.remove('_active');
+          }
+        });
+      };
+
+      if (links.length > 0) {
+        links.forEach(item => {
+          item.addEventListener('click', selectTabNav);
+        });
+      }
+    };
+
+    getTab(complexTabsLink, complexTabsContent);
   };
   getPopup();
   getSelects();
   getForYourTaskSelectAll();
   getSorting();
+  // getMap();
+  getTabs();
 })();
