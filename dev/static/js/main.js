@@ -294,10 +294,52 @@
 
     getTab(complexTabsLink, complexTabsContent);
   };
+  const getGallery = () => {
+    const lgGalleryMethodsDemo = document.getElementById('gallery-complex');
+    let methodsInstance;
+    lgGalleryMethodsDemo.addEventListener('lgInit', () => {
+        const previousBtn =
+            '<button type="button" aria-label="Previous slide" class="lg-prev"></button>';
+        const nextBtn =
+            '<button type="button" aria-label="Next slide" class="lg-next"></button>';
+        const closeBtn = '<button type="button" aria-label="Close Gallery" class="lg-close"></button>';
+        const lgContainer = document.querySelector('.lg');
+        const lgToolbar = document.querySelector('.lg-toolbar');
+
+        lgContainer.insertAdjacentHTML('beforeend', nextBtn);
+        lgContainer.insertAdjacentHTML('beforeend', previousBtn);
+        lgContainer.insertAdjacentHTML('beforeend', closeBtn);
+        document.querySelector('.lg-next').addEventListener('click', () => {
+            methodsInstance.goToNextSlide();
+        });
+        document.querySelector('.lg-prev').addEventListener('click', () => {
+            methodsInstance.goToPrevSlide();
+        });
+        document.querySelector('.lg-close').addEventListener('click', () => {
+          methodsInstance.closeGallery();
+      });
+    });
+
+    methodsInstance = lightGallery(lgGalleryMethodsDemo, {
+      addClass: 'gallery',
+      download: false,
+      plugins: [lgThumbnail],
+      thumbnail: true,
+      thumbHeight: '60px',
+      thumbWidth: 60,
+      thumbMargin: 20,
+      counter: false,
+      height: '900px',
+      width: '1600px',
+      showCloseIcon: false,
+      controls: false,
+    });
+  };
   getPopup();
   getSelects();
   getForYourTaskSelectAll();
   getSorting();
-  // getMap();
+  getMap();
   getTabs();
+  getGallery();
 })();
