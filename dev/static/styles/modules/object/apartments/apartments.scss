@@ -1,5 +1,8 @@
 .apartments {
   padding: 0 40px;
+  @media screen and (max-width: 1500px) {
+    padding: 0 20px;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -49,10 +52,12 @@
     font-size: 40px;
     line-height: 46px;
     margin: 0 40px 0 0;
+    word-break: break-all;
   }
   &__prices {
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
     position: relative;
     &::before {
       content: '';
@@ -122,11 +127,21 @@
 .apartments__list._classic {
   .apartments__item {
     flex-direction: row;
-    max-height: 200px;
+    // max-height: 200px;
+    min-height: 200px;
+  }
+  .apartments__image {
+    @media screen and (max-width: 1400px) {
+      flex: 0 0 50%;
+    }
   }
   .apartments__picture {
-    height: 200px;
+    // height: 200px;
+    height: 100%;
     width: 200px;
+    @media screen and (max-width: 1400px) {
+      width: 100%;
+    }
   }
   .apartments__img {
     height: 100%;
@@ -134,14 +149,24 @@
   .apartments__descriptions {
     background-size: 100px 200px;
     padding: 17px 30px 20px;
+    @media screen and (max-width: 1400px) {
+      flex: 0 0 50%;
+      padding: 17px 15px 20px;
+    }
   }
   .apartments__top-line {
     margin: 0 0 5px 0;
+    @media screen and (max-width: 1700px) {
+      flex-direction: column;
+    }
   }
   .apartments__name {
     font-size: 25px;
     line-height: 30px;
     margin: 0 32px 0 0;
+    @media screen and (max-width: 1700px) {
+      margin: 0 0 20px 0;
+    }
   }
   .apartments__locations {
     align-items: flex-start;
@@ -162,11 +187,12 @@
 
 .apartments__list._gallery {
   justify-content: space-between;
-  margin: -30px 0 30px 0;
+  margin: -30px -15px 30px -15px;
   .apartments__item {
-    flex: 0 0 280px;
+    flex: 0 0 50%;
     height: auto;
-    padding-top: 30px;
+    padding: 30px 15px 0;
+    width: 50%;
     &:not(:last-child) {
       margin: 0;
     }
@@ -178,7 +204,7 @@
   }
   .apartments__picture {
     height: 128px;
-    width: 280px;
+    width: 100%;
   }
   .apartments__img {
     height: 100%;
@@ -187,7 +213,7 @@
     background-size: 75px 150px;
     height: 100%;
     padding: 12px 15px 20px;
-    width: 280px;
+    width: 100%;
   }
   .apartments__top-line {
     flex-direction: column;
@@ -196,11 +222,17 @@
     font-size: 25px;
     line-height: 30px;
     margin: 0;
+    word-break: break-all;
   }
   .apartments__prices {
     flex-direction: row;
     &::before {
       display: none;
+    }
+    @media screen and (max-width: 1700px) {
+      align-items: center;
+      flex-direction: column;
+      padding-top: 10px;
     }
   }
   .apartments__price {
@@ -221,7 +253,10 @@
     font-size: 14px;
     line-height: 17px;
     &:not(:last-child) {
-      margin: 0;
+      margin: 0 0 5px 0;
+    }
+    svg {
+      flex: 0 0 auto;
     }
   }
   .apartments__roominess {

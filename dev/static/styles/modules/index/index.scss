@@ -17,6 +17,9 @@
   &__inner {
     display: flex;
     padding-top: 60px;
+    @media screen and (max-width: 1400px) {
+      align-items: flex-start;
+    }
   }
   &__image {
     flex: 0 0 auto;
@@ -43,12 +46,20 @@
       right: -5px;
       width: 10px;
     }
+    @media screen and (max-width: 1400px) {
+      flex: 0 0 50%;
+      height: auto;
+    }
   }
   &__picture {
     display: block;
     height: 305px;
     overflow: hidden;
     width: 305px;
+    @media screen and (max-width: 1400px) {
+      height: auto;
+      width: 100%;
+    }
   }
   &__img {
     height: 100%;
