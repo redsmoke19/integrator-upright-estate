@@ -4,6 +4,9 @@
   flex: 0 0 200px;
   height: 100vh;
   padding: 110px 0 0 30px;
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
   &__logo {
     color: $gray-color;
     display: block;

@@ -1,4 +1,4 @@
-.filter__main
+form.filter__main(action="" method="POST")
 	.filter__box
 		select.js-select(data-trigger id="homeFilterDistrict")
 			option(value="") Округ
@@ -26,9 +26,16 @@
 	button.button.filter__search(type="submit")
 		span Найти
 .filter__parameters
-	a.filter__button._popup-link(href="#for-your-task")
-		+icon('icon-target', 'filter__icon', '20', '20')
-		span ЖК под вашу задачу
-	a.filter__button._popup-link(href="#additional-parameters")
-		+icon('icon-parameters', 'filter__icon', '20', '20')
-		span Дополнительные параметры
+	.filter__tabs.filter-tabs
+		button.filter-tabs__tab.filter-tabs__tab--object-count._active
+			+icon('icon-parameters-tablet', 'filter-tabs__icon', '20', '20')
+		button.filter-tabs__tab.filter-tabs__tab--object-map
+			+icon('icon-locations', 'filter-tabs__icon', '16', '20')
+			span На карте
+	.filter__parameters--inner
+		a.filter__button._popup-link(href="#for-your-task")
+			+icon('icon-target', 'filter__icon', '20', '20')
+			span ЖК под вашу задачу
+		a.filter__button._popup-link(href="#additional-parameters")
+			+icon('icon-parameters', 'filter__icon', '20', '20')
+			span Доп. параметры

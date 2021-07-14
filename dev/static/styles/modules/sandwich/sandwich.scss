@@ -1,0 +1,57 @@
+.sandwich {
+  cursor: pointer;
+  height: 16px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+  &::before {
+    background-color: transparent;
+    content: '';
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    z-index: 10;
+  }
+  &._active {
+    .sandwich__line {
+      &--top {
+        top: 5px;
+        transform: rotate(45deg);
+      }
+      &--middle {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+      &--bottom {
+        top: 5px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__line {
+    background-color: $black;
+    border-radius: 10px;
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: all ease-out 0.3s;
+    width: 30px;
+    &--top {
+      top: 0;
+    }
+    &--middle {
+      top: 7px
+    }
+    &--bottom {
+      top: 14px;
+    }
+  }
+}

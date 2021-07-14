@@ -121,6 +121,9 @@
   }
   &__button {
     margin: 0 0 80px 0;
+    @media screen and (max-width: $tablet-size) {
+      display: none;
+    }
   }
 }
 
@@ -188,6 +191,10 @@
 .apartments__list._gallery {
   justify-content: space-between;
   margin: -30px -15px 30px -15px;
+  @media screen and (max-width: $tablet-size) {
+    justify-content: unset;
+    margin: 0;
+  }
   .apartments__item {
     flex: 0 0 50%;
     height: auto;
@@ -195,6 +202,11 @@
     width: 50%;
     &:not(:last-child) {
       margin: 0;
+    }
+    @media screen and (max-width: $tablet-size) {
+      flex: 0 0 280px;
+      padding: 0;
+      width: 280px;
     }
   }
   .apartments__logo {

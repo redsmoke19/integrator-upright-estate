@@ -9,6 +9,15 @@
   position: fixed;
   right: 0;
   width: calc(100% - 54.68% - 200px);
+  &--index {
+    @media screen and (max-width: $tablet-size) {
+      height: unset;
+      overflow: unset;
+      padding: 30px 0;
+      position: relative;
+      width: 100%;
+    }
+  }
   &__top {
     align-items: center;
     display: flex;
@@ -16,6 +25,7 @@
     margin: 0 0 25px 0;
     padding: 0 40px;
     @media screen and (max-width: 1500px) {
+      margin: 0;
       padding: 0 20px;
     }
   }
@@ -24,6 +34,10 @@
     font-size: 30px;
     font-weight: 500;
     line-height: 35px;
+    @media screen and (max-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
   &--complex {
     padding: 0;

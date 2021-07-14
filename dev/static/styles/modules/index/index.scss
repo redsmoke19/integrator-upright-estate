@@ -1,10 +1,22 @@
 .home {
   padding-top: 50px;
+  @media screen and (max-width: $tablet-size) {
+    padding-top: 0;
+  }
   &__title {
     color: $gray-color;
     font-size: 48px;
     line-height: 56px;
     margin: 0 0 20px 0;
+    @media screen and (max-width: $tablet-size) {
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 46px;
+      padding: 0 30px;
+      br {
+        display: none;
+      }
+    }
   }
   &__sub-title {
     color: $gray-color;
@@ -13,12 +25,20 @@
     font-size: 30px;
     line-height: 35px;
     margin: 0 0 30px 0;
+    @media screen and (max-width: $tablet-size) {
+      font-size: 18px;
+      margin: 0 0 25px 0;
+      padding: 0 30px;
+    }
   }
   &__inner {
     display: flex;
     padding-top: 60px;
     @media screen and (max-width: 1400px) {
       align-items: flex-start;
+    }
+    @media screen and (max-width: $tablet-size) {
+      padding: 40px 30px 0;
     }
   }
   &__image {
@@ -50,6 +70,10 @@
       flex: 0 0 50%;
       height: auto;
     }
+    @media screen and (max-width: $tablet-size) {
+      flex: 0 0 305px;
+      height: 305px;
+    }
   }
   &__picture {
     display: block;
@@ -59,6 +83,10 @@
     @media screen and (max-width: 1400px) {
       height: auto;
       width: 100%;
+    }
+    @media screen and (max-width: $tablet-size) {
+      height: 305px;
+      width: 305px;
     }
   }
   &__img {
@@ -106,7 +134,7 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 19px;
     margin: 0 25px 0 0;
     &--position {

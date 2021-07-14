@@ -1,6 +1,9 @@
 .sorting {
   align-items: center;
   display: flex;
+  @media screen and (max-width: $tablet-size) {
+    display: none;
+  }
   &__item {
     &:not(:last-child) {
       margin: 0 20px 0 0;

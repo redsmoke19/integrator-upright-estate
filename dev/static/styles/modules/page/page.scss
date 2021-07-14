@@ -1,3 +1,6 @@
 .page {
   display: flex;
+  @media screen and (max-width: $tablet-size) {
+    flex-direction: column;
+  }
 }

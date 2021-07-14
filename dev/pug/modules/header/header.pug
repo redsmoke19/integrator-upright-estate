@@ -1,4 +1,7 @@
-header.header
+header.header(data-da=".wrapper,1279,0")
+	a.header__logo
+		+icon('icon-logo-img-tablet', 'header__logo--image', '22', '50')
+		+icon('icon-logo-text-tablet', 'header__logo--text', '142', '24')
 	.header__contacts
 		a.header__link(href="tel:+79876543210")
 			+icon('icon-phone', 'header__icon', '14', '20')
@@ -6,7 +9,7 @@ header.header
 		a.header__link(href="#")
 			+icon('icon-consult', 'header__icon', '20', '20')
 			span.header__chat Консультация
-	ul.header__social.header-social
+	ul.header__social.header-social(data-da=".nav,1279,0")
 		li.header-social__item
 			a.header-social__link(href="#")
 				span.visually-hidden Ссылка на инстаграм
@@ -23,3 +26,7 @@ header.header
 			a.header-social__link(href="#")
 				span.visually-hidden Ссылка на whatsApp
 				+icon('icon-whatsapp', 'header-social__icon', '20', '20')
+	.header__sandwich.sandwich
+		.sandwich__line.sandwich__line--top
+		.sandwich__line.sandwich__line--middle
+		.sandwich__line.sandwich__line--bottom

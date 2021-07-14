@@ -1,15 +1,24 @@
 .filter {
+  @media screen and (max-width: $tablet-size) {
+    padding: 0 30px;
+  }
   &__main {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 0 0 40px 0;
+    @media screen and (max-width: $tablet-size) {
+      margin: 0 0 50px 0;
+    }
   }
   &__box {
     flex: 0 0 26.7%;
   }
   &__search {
     flex: 0 0 13.4%;
+    @media screen and (max-width: $tablet-size) {
+      padding: 10px 15px;
+    }
     span {
       position: relative;
       &::after {
@@ -27,6 +36,12 @@
     }
   }
   &__parameters {
+    display: flex;
+    @media screen and (max-width: $tablet-size) {
+      justify-content: space-between;
+    }
+  }
+  &__parameters--inner {
     display: flex;
   }
   &__button {
@@ -49,6 +64,42 @@
     }
     &:hover {
       opacity: 0.7;
+    }
+  }
+}
+
+.filter-tabs {
+  display: none;
+  @media screen and (max-width: $tablet-size) {
+    display: flex;
+  }
+  &__tab {
+    display: none;
+    @media screen and (max-width: $tablet-size) {
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid $bg-gray-color;
+      color: $gray-color;
+      display: flex;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      margin: 0;
+      padding: 15px;
+      position: relative;
+    }
+    &._active {
+      @media screen and (max-width: $tablet-size) {
+        background-color: $bg-gray-color;
+      }
+    }
+  }
+  &__icon {
+    display: none;
+    @media screen and (max-width: $tablet-size) {
+      display: block;
+      fill: $yellow-color;
+      margin: 0 10px 0 0;
     }
   }
 }
