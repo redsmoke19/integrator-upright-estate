@@ -3,6 +3,10 @@ footer { flex: 0 0 auto; }
   background-color: $gray-color;
   margin-top: auto;
   padding: 30px 40px 55px;
+  @media screen and (max-width: $tablet-size) {
+    margin: 0;
+    padding: 30px 30px 60px;
+  }
   &__row {
     display: flex;
     justify-content: space-between;
@@ -175,6 +179,9 @@ footer { flex: 0 0 auto; }
     justify-content: space-between;
     margin: 0 -40px;
     padding: 20px 40px 0;
+    @media screen and (max-width: $tablet-size) {
+      margin: 0 -30px;
+    }
   }
   &__copyright {
     color: $light-grey-color;
@@ -198,10 +205,6 @@ footer { flex: 0 0 auto; }
     &--link {
       display: block;
       font-size: 0;
-    }
-    @media screen and (max-width: 1700px) {
-      align-items: flex-end;
-      flex-direction: column;
     }
   }
 }

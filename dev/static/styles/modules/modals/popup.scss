@@ -66,8 +66,15 @@
     padding: 50px 60px 120px;
     position: relative;
     width: 930px;
+    @media screen and (max-width: $tablet-size) {
+      padding: 50px 20px 50px;
+      width: 80%;
+    }
     &._for-your-task {
-      height: 778px;
+      // height: 778px;
+      @media screen and (max-width: $tablet-size) {
+        height: auto;
+      }
     }
   }
   // .popup__close

@@ -3,17 +3,38 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px 40px;
+    @media screen and (max-width: $tablet-size) {
+      margin: -15px -15px 30px;
+    }
   }
   &__item {
     display: flex;
     margin: 0 15px 20px;
     width: 250px;
+    @media screen and (max-width: $tablet-size) {
+      margin: 0;
+      padding: 15px 15px 0;
+      width: 50%;
+    }
   }
   &__bottom {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $tablet-size) {
+      flex-wrap: wrap;
+    }
     > * {
       flex: 0 0 250px;
+      @media screen and (max-width: $tablet-size) {
+        flex: 0 0 calc(50% - 20px);
+        margin: 0 10px;
+      }
+    }
+    .for-your-task__search {
+      @media screen and (max-width: $tablet-size) {
+        margin: 20px 0 0 0;
+        flex: 0 0 100%;
+      }
     }
   }
   &__button-text {

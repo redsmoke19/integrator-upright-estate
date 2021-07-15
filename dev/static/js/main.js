@@ -541,6 +541,49 @@
       });
     }
   };
+  const getSlider = () => {
+    const main = document.querySelector('main');
+    const breakpointMobile = window.matchMedia('(min-width: 768px)');
+    const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
+    let apartmensSlider;
+
+    const breakpointChecker = function () {
+      let resizeTimeout;
+      if (!resizeTimeout) {
+        resizeTimeout = setTimeout(function () {
+          resizeTimeout = null;
+          resizeHandlerDesktop();
+        }, 100);
+      }
+
+      function resizeHandlerDesktop() {
+        if (breakpointDesktop.matches === true) {
+          if (apartmensSlider !== undefined) {
+            apartmensSlider.destroy(true, true);
+          }
+        } else if (breakpointDesktop.matches === false) {
+          enableSubMenu();
+        }
+      }
+    };
+
+    const enableSubMenu = function () {
+      apartmensSlider = new Swiper('.apartments__inner', {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        slidesOffsetBefore: 30,
+        slidesOffsetAfter: 30,
+      });
+    };
+
+    breakpointDesktop.addListener(breakpointChecker);
+    // breakpointDesktop.addListener(breakpointChecker);
+    breakpointChecker();
+  };
   dynamicAdaptiv();
   getResize();
   getPopup();
@@ -550,4 +593,5 @@
   // getMap();
   getTabs();
   getGallery();
+  getSlider();
 })();

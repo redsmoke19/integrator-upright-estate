@@ -1,12 +1,22 @@
 .apartments {
-  padding: 0 40px;
-  @media screen and (max-width: 1500px) {
-    padding: 0 20px;
+  &__inner {
+    padding: 0 40px;
+    overflow: unset;
+    @media screen and (max-width: 1500px) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: $tablet-size) {
+      overflow: hidden;
+      padding: 0;
+    }
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 30px 0;
+    @media screen and (max-width: $tablet-size) {
+      flex-wrap: nowrap;
+    }
   }
   &__item {
     display: flex;
@@ -191,9 +201,11 @@
 .apartments__list._gallery {
   justify-content: space-between;
   margin: -30px -15px 30px -15px;
+  width: unset;
   @media screen and (max-width: $tablet-size) {
     justify-content: unset;
     margin: 0;
+    width: 100%;
   }
   .apartments__item {
     flex: 0 0 50%;
@@ -205,7 +217,7 @@
     }
     @media screen and (max-width: $tablet-size) {
       flex: 0 0 280px;
-      padding: 0;
+      padding: 10px 0 0 0;
       width: 280px;
     }
   }

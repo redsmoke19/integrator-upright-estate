@@ -8,6 +8,7 @@ const vendorsScripts = [
   'node_modules/choices.js/public/assets/scripts/choices.min.js',
   'node_modules/lightgallery/lightgallery.min.js',
   'node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.min.js',
+  'node_modules/swiper/swiper-bundle.min.js'
 ];
 
 module.exports = function vendors(cb) {
