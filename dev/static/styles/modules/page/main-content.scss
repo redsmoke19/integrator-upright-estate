@@ -7,6 +7,9 @@
     min-height: unset;
     padding: 20px 0 60px;
   }
+  @media screen and (max-width: $mobile-size) {
+    padding: 20px 0 80px;
+  }
   &--selection {
     flex: 0 0 auto;
     margin-left: 60px;

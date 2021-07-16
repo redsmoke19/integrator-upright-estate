@@ -29,11 +29,11 @@
     }
   }
   @media screen and (max-width: $mobile-size) {
-    background: url("../images/common/logo-desktop-image.svg"), linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 120px,rgba(255,255,255,1) 120px,rgba(255,255,255,1) 100%);
+    background: url("../images/common/logo-desktop-image.svg"), linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 97px,rgba(255,255,255,1) 97px,rgba(255,255,255,1) 100%);
     background-position: -20px 20px, center center;
-    background-size: 180px calc(100% - 20px), 100% 100%;
+    background-size: 150px calc(100% - 20px), 100% 100%;
     background-repeat: no-repeat, no-repeat;
-    padding: 40px 40px 20px 180px;
+    padding: 40px 40px 20px 150px;
     width: 100%;
   }
   &__logo {

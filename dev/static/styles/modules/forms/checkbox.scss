@@ -24,6 +24,10 @@
     top: 50%;
     transform: translateY(-50%);
     width: 10px;
+    @media screen and (max-width: $mobile-size) {
+      top: 3px;
+      transform: translateY(0);
+    }
   }
   &:focus + label::before {
     box-shadow: $input-btn-focus-box-shadow;
@@ -42,6 +46,10 @@
     transition: all ease-out 0.15s;
     transform: translateY(-50%);
     width: 10px;
+    @media screen and (max-width: $mobile-size) {
+      top: 3px;
+      transform: translateY(0);
+    }
   }
   &:not(:checked) + label::after {
     opacity: 0;

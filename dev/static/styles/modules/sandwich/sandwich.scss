@@ -12,8 +12,8 @@
   }
   @media screen and (max-width: $mobile-size) {
     order: 0;
-    left: 20px;
     position: absolute;
+    right: 20px;
     top: 50%;
     transform: translateY(calc(-50% + 10px));
   }

@@ -586,8 +586,6 @@
     }
   };
   const getSlider = () => {
-    const main = document.querySelector('main');
-    const breakpointMobile = window.matchMedia('(min-width: 768px)');
     const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
     let apartmensSlider;
 
@@ -618,14 +616,21 @@
         preventClicks: true,
         preventClicksPropagation: true,
         slidesPerView: 'auto',
-        spaceBetween: 30,
-        slidesOffsetBefore: 30,
-        slidesOffsetAfter: 30,
+        spaceBetween: 20,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        breakpoints: {
+          // when window width is >= 320px
+          768: {
+            spaceBetween: 30,
+            slidesOffsetBefore: 30,
+            slidesOffsetAfter: 30,
+          },
+        },
       });
     };
 
     breakpointDesktop.addListener(breakpointChecker);
-    // breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
   };
   dynamicAdaptiv();

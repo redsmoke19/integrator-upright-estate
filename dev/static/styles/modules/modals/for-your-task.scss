@@ -29,11 +29,18 @@
         flex: 0 0 calc(50% - 20px);
         margin: 0 10px;
       }
+      @media screen and (max-width: $mobile-size) {
+        flex: 0 0 100%;
+        margin: 0 0 20px 0;
+      }
     }
     .for-your-task__search {
       @media screen and (max-width: $tablet-size) {
         margin: 20px 0 0 0;
         flex: 0 0 100%;
+      }
+      @media screen and (max-width: $mobile-size) {
+        margin: 0;
       }
     }
   }

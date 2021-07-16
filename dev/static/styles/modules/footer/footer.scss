@@ -7,6 +7,9 @@ footer { flex: 0 0 auto; }
     margin: 0;
     padding: 30px 30px 60px;
   }
+  @media screen and (max-width: $mobile-size) {
+    padding: 30px 20px 60px;
+  }
   &__row {
     display: flex;
     justify-content: space-between;
@@ -16,6 +19,9 @@ footer { flex: 0 0 auto; }
     }
     @media screen and (max-width: $tablet-size) {
       align-items: flex-start;
+    }
+    @media screen and (max-width: $mobile-size) {
+      margin: 0 0 40px 0;
     }
   }
   &__left-col {
@@ -30,6 +36,11 @@ footer { flex: 0 0 auto; }
       flex: 0 0 auto;
       flex-direction: row;
       width: 33%;
+    }
+    @media screen and (max-width: $mobile-size) {
+      justify-content: space-between;
+      margin: 0 0 25px 0;
+      width: 100%;
     }
   }
   &__middle-col {
@@ -59,11 +70,19 @@ footer { flex: 0 0 auto; }
       padding: 0 0 0 50px;
       width: 67%;
     }
+    @media screen and (max-width: $mobile-size) {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
   }
   &__logo {
     margin: 0 0 30px 0;
     @media screen and (max-width: $tablet-size) {
       margin: 0 24px 0 0;
+    }
+    @media screen and (max-width: $mobile-size) {
+      margin: 0;
     }
   }
   &__locations {
@@ -73,6 +92,10 @@ footer { flex: 0 0 auto; }
     @media screen and (max-width: $tablet-size) {
       margin: 0 25px 0 0;
       width: 41%;
+    }
+    @media screen and (max-width: $mobile-size) {
+      margin: 0 0 15px 0;
+      width: 100%;
     }
   }
   &__locations--icon {
@@ -100,6 +123,9 @@ footer { flex: 0 0 auto; }
     position: relative;
     @media screen and (max-width: $tablet-size) {
       margin: 0;
+    }
+    @media screen and (max-width: $mobile-size) {
+      margin: 0 0 15px 0;
     }
   }
   &__phones--icon {
@@ -182,6 +208,12 @@ footer { flex: 0 0 auto; }
     @media screen and (max-width: $tablet-size) {
       margin: 0 -30px;
     }
+    @media screen and (max-width: $mobile-size) {
+      align-items: stretch;
+      flex-direction: column;
+      margin: 0 -20px;
+      padding: 20px 20px 0;
+    }
   }
   &__copyright {
     color: $light-grey-color;
@@ -190,6 +222,9 @@ footer { flex: 0 0 auto; }
     font-weight: 300;
     line-height: 17px;
     margin: 0 15px 0 0;
+    @media screen and (max-width: $mobile-size) {
+      margin: 0 0 15px 0;
+    }
   }
   &__create {
     align-items: center;
@@ -215,6 +250,9 @@ footer { flex: 0 0 auto; }
   margin: -20px -10px 0;
   @media screen and (max-width: $tablet-size) {
     width: 140px;
+  }
+  @media screen and (max-width: $mobile-size) {
+    justify-content: flex-end;
   }
   &__item {
     align-items: center;

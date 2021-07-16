@@ -52,6 +52,7 @@
     }
     @media screen and (max-width: $mobile-size) {
       flex-direction: column;
+      padding: 40px 20px 0;
     }
   }
   &__image {
@@ -87,6 +88,12 @@
       flex: 0 0 305px;
       height: 305px;
     }
+    @media screen and (max-width: $mobile-size) {
+      flex: unset;
+      height: auto;
+      margin: 0 0 25px 0;
+      width: 100%;
+    }
   }
   &__picture {
     display: block;
@@ -100,6 +107,10 @@
     @media screen and (max-width: $tablet-size) {
       height: 305px;
       width: 305px;
+    }
+    @media screen and (max-width: $mobile-size) {
+      height: auto;
+      width: 100%;
     }
   }
   &__img {
@@ -124,6 +135,9 @@
       top: 0;
       width: 100px;
     }
+    @media screen and (max-width: $mobile-size) {
+      margin: 0 0 20px 0;
+    }
   }
   &__description {
     color: $gray-color;
@@ -141,6 +155,9 @@
   &__bottom {
     align-items: center;
     display: flex;
+    @media screen and (max-width: $mobile-size) {
+      overflow: hidden;
+    }
   }
   &__director {
     color: $gray-color;
@@ -159,6 +176,10 @@
     height: 68px;
     object-fit: cover;
     width: 200px;
+    @media screen and (max-width: $mobile-size) {
+      object-fit: contain;
+      width: 180px;
+    }
   }
 }
 

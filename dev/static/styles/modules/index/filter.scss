@@ -129,9 +129,10 @@
     }
     @media screen and (max-width: $mobile-size) {
       justify-content: center;
-      &--object-map {
-        flex: 1 0 auto;
-      }
+      flex: 1 0 auto;
+      // &--object-map {
+      //   flex: 1 0 auto;
+      // }
     }
     &._active {
       @media screen and (max-width: $tablet-size) {

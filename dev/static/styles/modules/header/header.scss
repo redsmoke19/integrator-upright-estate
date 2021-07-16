@@ -35,10 +35,8 @@
         position: absolute;
       }
       @media screen and (max-width: $mobile-size) {
-        bottom: -21px;
+        bottom: -22px;
         height: 60px;
-        left: unset;
-        right: 0;
         width: 25px;
       }
     }
