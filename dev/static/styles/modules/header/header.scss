@@ -4,23 +4,42 @@
   justify-content: space-between;
   @media screen and (max-width: $tablet-size) {
     border-bottom: 1px solid $yellow-color;
+    background-color: $white;
     justify-content: unset;
+    left: 0;
     padding: 17px 20px;
+  }
+  @media screen and (max-width: $mobile-size) {
+    padding: 40px 20px 20px;
+    position: relative;
   }
   &__logo {
     display: none;
     @media screen and (max-width: $tablet-size) {
       display: block;
-      font-size: 0%;
+      font-size: 0;
       line-height: 1;
       padding-left: 34px;
       position: relative;
+    }
+    @media screen and (max-width: $mobile-size) {
+      order: 1;
+      padding-left: 0;
+      text-align: center;
+      width: 100%;
     }
     &--image {
       @media screen and (max-width: $tablet-size) {
         bottom: -18px;
         left: 0;
         position: absolute;
+      }
+      @media screen and (max-width: $mobile-size) {
+        bottom: -21px;
+        height: 60px;
+        left: unset;
+        right: 0;
+        width: 25px;
       }
     }
   }
@@ -29,6 +48,9 @@
     display: flex;
     @media screen and (max-width: $tablet-size) {
       margin: 0 55px 0 auto;
+    }
+    @media screen and (max-width: $mobile-size) {
+      display: none;
     }
   }
   &__link {
@@ -59,6 +81,9 @@
 .header-social {
   align-items: center;
   display: flex;
+  @media screen and (max-width: $tablet-size) {
+    margin: 0 0 50px 0;
+  }
   &__item {
     align-items: center;
     display: flex;

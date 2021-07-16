@@ -47,6 +47,17 @@
   &--selection {
     background-color: transparent;
   }
+  &__map {
+    display: none;
+    @media screen and (max-width: $tablet-size) {
+      width: 100%;
+      min-height: 362px;
+      background-color: $yellow-color;
+      &._active {
+        display: block;
+      }
+    }
+  }
 }
 
 @import './sorting/sorting';

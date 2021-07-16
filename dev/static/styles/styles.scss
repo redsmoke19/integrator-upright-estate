@@ -1,8 +1,8 @@
-@import "utils/vars";
-@import "utils/libs";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/sprite";
+@import 'utils/vars';
+@import 'utils/libs';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/sprite';
 @import './modules/bootstrap/bootstrap.scss';
 //@include sprites($spritesheet-sprites);
 
@@ -21,22 +21,58 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  &::before {
+    display: none;
+    @media screen and (max-width: $tablet-size) {
+      background-color: rgba(0, 0, 0, 0.45);
+      content: '';
+      display: block;
+      height: 100vh;
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      pointer-events: none;
+      transition: all ease-out 0.3s 0.15s;
+      top: 0;
+      width: 100%;
+      z-index: 15;
+    }
+  }
   &._lock {
-		overflow: hidden;
-	}
+    overflow: hidden;
+  }
+  &._overlay {
+    position: relative;
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -48,7 +84,9 @@ img {
 input,
 button,
 textarea,
-select { font: inherit; }
+select {
+  font: inherit;
+}
 
 audio,
 canvas,
@@ -56,15 +94,23 @@ iframe,
 img,
 svg,
 video,
-textarea { vertical-align: middle; }
+textarea {
+  vertical-align: middle;
+}
 
-textarea { resize: none; }
+textarea {
+  resize: none;
+}
 
-section { position: relative; }
+section {
+  position: relative;
+}
 
 input,
 select,
-button { outline: none; }
+button {
+  outline: none;
+}
 
 .wrapper {
   display: flex;
@@ -72,7 +118,9 @@ button { outline: none; }
   height: 100%;
 }
 
-.content { flex: 1 0 auto; }
+.content {
+  flex: 1 0 auto;
+}
 
 .container {
   margin: 0 auto;
@@ -94,4 +142,4 @@ button { outline: none; }
 }
 
 //Модули
-@import "modules/modules";
+@import 'modules/modules';

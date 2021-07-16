@@ -1,4 +1,10 @@
 .apartments {
+  @media screen and (max-width: $tablet-size) {
+    display: none;
+    &._active {
+      display: block;
+    }
+  }
   &__inner {
     padding: 0 40px;
     overflow: unset;

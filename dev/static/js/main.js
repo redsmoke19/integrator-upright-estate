@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  const body = document.querySelector('body');
   let unlock = true;
   function dynamicAdaptiv() {
     // Dynamic Adapt v.1
@@ -229,14 +230,31 @@
       }, delay);
     }
   }
+  const getPageVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
   function getResize() {
     const breakpointTablet = window.matchMedia('(min-width: 1280px)');
+    const breakpointMobile = window.matchMedia('(min-width: 768px)');
     const apartmentsList = document.querySelector('.apartments__list');
     const apartmentsButtons = document.querySelectorAll('.sorting__button');
+    const homeTitle = document.querySelector('.home__title');
     if (breakpointTablet.matches === false) {
-      apartmentsList.classList.add('_gallery');
+      if (apartmentsList) {
+        apartmentsList.classList.add('_gallery');
+      }
+      if (homeTitle) {
+        homeTitle.textContent = 'Квартиры премиум- и бизнес-класса';
+      }
+    };
+    if (breakpointMobile.matches === false) {
+      if (homeTitle) {
+        homeTitle.textContent = 'Мы продаём квартиры';
+      }
     };
     window.addEventListener('resize', () => {
+      getPageVh();
       if (breakpointTablet.matches === false) {
         if (apartmentsList) {
           apartmentsList.classList.remove('_classic');
@@ -249,7 +267,7 @@
         }
       }
     });
-  }
+  };
   const getPopup = () => {
     const popupLink = document.querySelectorAll('._popup-link');
     const popups = document.querySelectorAll('.popup');
@@ -333,6 +351,31 @@
         popupClose();
       }
     });
+  };
+  const getSendwich = () => {
+    const sandwich = document.querySelector('.sandwich');
+    const nav = document.querySelector('.nav');
+
+    if (sandwich != null) {
+      const delay = 500;
+      sandwich.addEventListener('click', function (e) {
+        if (unlock) {
+          bodyLock(delay);
+          sandwich.classList.toggle('_active');
+          nav.classList.toggle('_active');
+          body.classList.toggle('_overlay');
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (!nav.classList.contains('_active')) return;
+        if (!e.target.closest('._active')) {
+          bodyLock(delay);
+          nav.classList.remove('_active');
+          sandwich.classList.remove('_active');
+          body.classList.remove('_overlay');
+        }
+      });
+    }
   };
   const getSelects = () => {
     const selectItems = document.querySelectorAll('.js-select');
@@ -463,9 +506,9 @@
   };
   const getTabs = () => {
     const complexTabsLink = document.querySelectorAll('.tabs__complex-link');
-    const complexTabsContent = document.querySelectorAll(
-      '.tabs__complex-content'
-    );
+    const complexTabsContent = document.querySelectorAll('.tabs__complex-content');
+    const objectFilterLink = document.querySelectorAll('.filter-tabs__tab');
+    const objectFilterContent = document.querySelectorAll('._js-object-tab-content');
 
     const getTab = function (links, content) {
       let tabName;
@@ -496,6 +539,7 @@
     };
 
     getTab(complexTabsLink, complexTabsContent);
+    getTab(objectFilterLink, objectFilterContent);
   };
   const getGallery = () => {
     const lgGalleryMethodsDemo = document.getElementById('gallery-complex');
@@ -585,7 +629,9 @@
     breakpointChecker();
   };
   dynamicAdaptiv();
+  getPageVh();
   getResize();
+  getSendwich();
   getPopup();
   getSelects();
   getForYourTaskSelectAll();

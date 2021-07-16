@@ -2,5 +2,6 @@
   display: flex;
   @media screen and (max-width: $tablet-size) {
     flex-direction: column;
+    // padding-top: 59px;
   }
 }
